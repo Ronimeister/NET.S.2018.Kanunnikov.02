@@ -52,9 +52,9 @@ namespace BitOperations
         /// <returns>Modified "firstInt" with the bits from "secondInt".</returns>
         private static int InsertBitsInInt(int firstInt, int secondInt, int startPos, int endPos)
         {
-            const int intSize = 31;
+            const int INT_SIZE = 31;
             int range = endPos - startPos + 1;
-            int mask = Int32.MaxValue >> intSize - range;
+            int mask = Int32.MaxValue >> INT_SIZE - range;
 
             int firstContainer = mask << startPos;
             firstInt &= ~firstContainer;
