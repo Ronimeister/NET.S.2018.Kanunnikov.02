@@ -8,6 +8,10 @@ namespace IntOperations.NUnit.Tests
     public class IntFilterTests
     {
         [TestCase(7, new int[] { 9, 25, 7, 2817, 19, 0, 777 }, ExpectedResult = new int[] { 7, 2817, 777 })]
+        [TestCase(7, new int[] { 932, 22145, 7, -2817, 11339, 0, 77467 }, ExpectedResult = new int[] { 7, -2817, 77467 })]
+        [TestCase(7, new int[] { -932, -22145, -7, -2817, -11339, 0, -77467 }, ExpectedResult = new int[] { -7, -2817, -77467 })]
+        [TestCase(7, new int[] { Int32.MaxValue }, ExpectedResult = new int[] { Int32.MaxValue })]
+        [TestCase(7, new int[] { Int32.MinValue }, ExpectedResult = new int[] { Int32.MinValue })]
         public int[] FilterDigit_ArrayAndFilter(int filter, int[] array)
             => FilterDigit(filter, array);
 

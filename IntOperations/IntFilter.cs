@@ -42,9 +42,13 @@ namespace IntOperations
             for (int i = 0; i < unfilteredArr.Length; i++)
             {
                 buffElement = unfilteredArr[i];
-                if (buffElement < 0)
+                if (buffElement < 0 && buffElement != Int32.MinValue)
                 {
                     buffElement *= -1;
+                }
+                else if (buffElement == Int32.MinValue)
+                {
+                    filteredList.Add(unfilteredArr[i]);
                 }
 
                 while (buffElement != 0)

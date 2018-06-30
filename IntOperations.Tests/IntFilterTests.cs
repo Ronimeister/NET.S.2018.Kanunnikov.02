@@ -18,6 +18,30 @@ namespace IntOperations.Tests
             CollectionAssert.AreEqual(expectedArray, actualArray);
         }
 
+        [TestMethod]
+        public void FilterDigit_IntMaxTestArrayAndFilter_ExpectedArray()
+        {
+            int[] testArray = {Int32.MaxValue};
+            int filter = 7;
+            int[] expectedArray = {Int32.MaxValue};
+
+            int[] actualArray = IntFilter.FilterDigit(filter, testArray);
+
+            CollectionAssert.AreEqual(expectedArray, actualArray);
+        }
+
+        [TestMethod]
+        public void FilterDigit_IntMinTestArrayAndFilter_ExpectedArray()
+        {
+            int[] testArray = { Int32.MinValue };
+            int filter = 7;
+            int[] expectedArray = { Int32.MinValue };
+
+            int[] actualArray = IntFilter.FilterDigit(filter, testArray);
+
+            CollectionAssert.AreEqual(expectedArray, actualArray);
+        }
+
         [TestMethod, ExpectedException(typeof(ArgumentNullException))]
         public void FilterDigit_NullAndFilter_ArgumentNullException()
         {
