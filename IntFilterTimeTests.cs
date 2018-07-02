@@ -46,7 +46,7 @@ private static int[] FilterArrayValuesUsingStrings(int[] unfilteredArr, int filt
         static void Main(string[] args)
         {
             Random rand = new Random();
-            int[] testArray = new int[int.MaxValue / 100];
+            int[] testArray = new int[int.MaxValue / 10];
             for (int i = 0; i < testArray.Length; i++)
             {
                 testArray[i] = rand.Next(-1000, 1001);
@@ -67,6 +67,6 @@ private static int[] FilterArrayValuesUsingStrings(int[] unfilteredArr, int filt
 
             timer.Stop();
 
-            Console.WriteLine("String method: " + stringTime);
-            Console.WriteLine("Division method: " + divisionTime);
+            Console.WriteLine("String method: " + stringTime); //String method: 70.8089656 sec
+            Console.WriteLine("Division method: " + divisionTime); //Division method: 9.5935476 sec
         }

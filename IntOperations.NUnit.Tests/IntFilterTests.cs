@@ -22,5 +22,7 @@ namespace IntOperations.NUnit.Tests
         [Test]
         public void FilterDigit_WithInvalidFilter_ThrowArgumentException()
             => Assert.Throws<ArgumentException>(() => FilterDigit(287, new int[] { 9, 25, 7, 2817, 19, 0, 777 }));
+
+
     }
 }
