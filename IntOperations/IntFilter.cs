@@ -13,6 +13,8 @@ namespace IntOperations
         /// </summary>
         /// <param name="unfilteredArr">Filtered array</param>
         /// <param name="filter">Digit that contains in all needed array values</param>
+        /// <exception cref="ArgumentNullException">Throws when the array is equal to null.</exception>
+        /// <exception cref="ArgumentException">Throws when the filter isn't less than 10 and bigger than 0.</exception>
         /// <returns>Array that contains needed values</returns>
         public static int[] FilterDigit(int filter, params int[] unfilteredArr)
         {
