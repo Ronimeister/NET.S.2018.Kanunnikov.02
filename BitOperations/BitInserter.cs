@@ -19,6 +19,7 @@ namespace BitOperations
         /// <param name="secondInt">Integer from where needed bits should be insert.</param>
         /// <param name="startPosition">Start position to insert bits.</param>
         /// <param name="endPosition">End position to insert bits.</param>
+        /// <exception cref="ArgumentOutOfRangeException">Throws when positions isn't correct.</exception>
         /// <returns>Modified "firstInt" with the bits from "secondInt".</returns>
         public static int InsertNumber(int firstInt, int secondInt, int startPosition, int endPosition)
         {
